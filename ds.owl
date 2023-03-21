@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+are we using https://catalog.digital-scriptorium.org/wiki/ as namespace?
+else, the procedure to add an identifier on w3id.org can be found here: https://w3id.org/#new 
+it basically consists of a pull request against https://github.com/perma-id/w3id.org
+-->
+<rdf:RDF
+	xmlns="https://catalog.digital-scriptorium.org/wiki/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:voaf="http://purl.org/vocommons/voaf#">
+	<!-- change if this should be w3id or something else -->
+	<owl:Ontology
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/">
+		<!-- this is DS version 2.0, is there a more specific link to use? -->
+		<owl:versionIRI
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/"/>
+		<owl:versionInfo
+			rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 2.0</owl:versionInfo>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+		<rdfs:label
+			xml:lang="en">Digital Scriptorium Ontology</rdfs:label>
+		<skos:definition
+			xml:lang="en">The Digital Scriptorium (DS) Catalog is the online data repository,
+			semantic portal, and knowledge base of the Digital Scriptorium consortium, with the goal
+			of becoming a national union catalog of premodern manuscripts in US
+			collections.</skos:definition>
+		<vann:preferredNamespacePrefix>ds</vann:preferredNamespacePrefix>
+		<dcterms:title
+			xml:lang="en">Digital Scriptorium Ontology</dcterms:title>
+		<voaf:specializes
+			rdf:resource="http://wikiba.se/ontology"/>
+	</owl:Ontology>
+	<!-- CLASSES -->
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1">
+		<rdfs:label
+			xml:lang="en">Manuscript</rdfs:label>
+		<skos:definition
+			xml:lang="en">A manuscript.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2">
+		<rdfs:label
+			xml:lang="en">Holding</rdfs:label>
+		<skos:definition
+			xml:lang="en">Holding of a manuscript in an organization etc.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3">
+		<rdfs:label
+			xml:lang="en">DS 2.0 Record</rdfs:label>
+		<skos:definition
+			xml:lang="en">A DS 2.0 metadata record.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4">
+		<rdfs:label
+			xml:lang="en">Current</rdfs:label>
+		<skos:definition
+			xml:lang="en">The manuscript holding is current.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5">
+		<rdfs:label
+			xml:lang="en">Non-Current</rdfs:label>
+		<skos:definition
+			xml:lang="en">The described holding is not current.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6">
+		<rdfs:label
+			xml:lang="en">Standard Title</rdfs:label>
+		<skos:definition
+			xml:lang="en">A standard (non-authoritative) string title to facilitate search (e.g.,
+			Bible, City of God, Metaphysics). </skos:definition>
+		<skos:scopeNote>Note: a Standard Title is a string value that does not designate a work;
+			e.g., 'De rerum natura.', which can represent several works.</skos:scopeNote>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7">
+		<rdfs:label
+			xml:lang="en">Actor (Name Authority)</rdfs:label>
+		<skos:definition
+			xml:lang="en">An actor instance.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8">
+		<rdfs:label
+			xml:lang="en">Personal (Name Authority) </rdfs:label>
+		<skos:definition
+			xml:lang="en">A person instance.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9">
+		<rdfs:label
+			xml:lang="en">Corporate (Name Authority)</rdfs:label>
+		<skos:definition
+			xml:lang="en">A corporate entity instance.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10">
+		<rdfs:label
+			xml:lang="en">Role (Authority File)</rdfs:label>
+		<skos:definition
+			xml:lang="en">Role of an actor related to a manuscript.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11">
+		<rdfs:label
+			xml:lang="en">Term (Authority File)</rdfs:label>
+		<skos:definition
+			xml:lang="en">An authorized subject, named subject, genre, form, or other
+			term.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12">
+		<rdfs:label
+			xml:lang="en">Language (Authority File)</rdfs:label>
+		<skos:definition
+			xml:lang="en">Language in which the text of the manuscript is written.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13">
+		<rdfs:label
+			xml:lang="en">Century (Authority File)</rdfs:label>
+		<skos:definition
+			xml:lang="en">Century.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<!-- Should this be subclassed to Q1? -->
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14">
+		<rdfs:label
+			xml:lang="en">Datable</rdfs:label>
+		<skos:definition
+			xml:lang="en">The manuscript is dated or datable.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<!-- Should this be subclassed to Q1? -->
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15">
+		<rdfs:label
+			xml:lang="en">Non-Datable</rdfs:label>
+		<skos:definition
+			xml:lang="en">The manuscript is not datable.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16">
+		<rdfs:label
+			xml:lang="en">Place (Authority File)</rdfs:label>
+		<skos:definition
+			xml:lang="en">A place.</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17">
+		<rdfs:label
+			xml:lang="en">Material (Authority File)</rdfs:label>
+		<skos:definition
+			xml:lang="en">Physical medium of manuscript (parchment, paper, etc.)</skos:definition>
+		<!--<rdfs:subClassOf rdf:resource=""/>-->
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<!-- PROPERTIES -->
+	<!-- no inverse properties defined -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P1">
+		<rdfs:label
+			xml:lang="en">DS ID</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">Digital Scriptorium 2.0 identifier.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P2">
+		<rdfs:label
+			xml:lang="en">manuscript holding</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+		<skos:definition
+			xml:lang="en">Holding of a manuscript.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P3">
+		<rdfs:label
+			xml:lang="en">described manuscript</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+		<skos:definition
+			xml:lang="en">The described physical manuscript.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<!-- P4 is a qualifier on P5. -->
+	<!-- reify statements containing P5 (is this how it's done? see https://www.w3.org/TR/owl-xmlsyntax/apd-example.html#subapd-eg24) -->
+	<owl:Class
+		rdf:ID="sP5o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P5"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P4">
+		<rdfs:label
+			xml:lang="en">holding institution in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP5o"> </rdfs:domain>
+		<rdfs:range>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:range>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P5">
+		<rdfs:label
+			xml:lang="en">holding institution as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P6">
+		<rdfs:label
+			xml:lang="en">holding status</rdfs:label>
+		<skos:definition
+			xml:lang="en">The status of the holding (current or non-current).</skos:definition>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P5"/>
+		<rdfs:range>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:range>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P7">
+		<rdfs:label
+			xml:lang="en">institutional ID</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
+		<skos:definition
+			xml:lang="en">Institutional identifier for the manuscript.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P8">
+		<rdfs:label
+			xml:lang="en">shelfmark</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">The institutional call number assigned to a manuscript.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P9">
+		<rdfs:label
+			xml:lang="en">link to institutional record</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+		<skos:definition
+			xml:lang="en">Link to catalog record or digital facsimile.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P10">
+		<rdfs:label
+			xml:lang="en">title as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">Title as given in the source metadata record.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P11 qualifies P10 -->
+	<owl:Class
+		rdf:ID="sP10o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P10"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P11">
+		<rdfs:label
+			xml:lang="en">standard title</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP10o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+		<skos:definition
+			xml:lang="en">The assigned standard title.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P12">
+		<rdfs:label
+			xml:lang="en">uniform title as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">Uniform title as recorded in the source metadata record.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P13 qualifies P10 -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P13">
+		<rdfs:label
+			xml:lang="en">in original script</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP10o"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">Name/title in original script. </skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P14">
+		<rdfs:label
+			xml:lang="en">associated name as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">Associated actor, such as author, artist, or scribe. </skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P15 qualifies P14 -->
+	<owl:Class
+		rdf:ID="sP14o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P14"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P15">
+		<rdfs:label
+			xml:lang="en">role in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP14o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+		<skos:definition
+			xml:lang="en">Actor role. </skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<!-- This is expressed as a dt property since there is no root item -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P16">
+		<rdfs:label
+			xml:lang="en">instance of</rdfs:label>
+		<rdfs:domain
+			rdf:resource="http://www.w3.org/2001/XMLSchema#anyType"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#anyType"/>
+		<skos:definition
+			xml:lang="en">that class of which this subject is a particular example and member. </skos:definition>
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P31"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P17 qualifies P14 -->
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P17">
+		<rdfs:label
+			xml:lang="en">name in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP14o"/>
+		<rdfs:range>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:range>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P18">
+		<rdfs:label
+			xml:lang="en">genre as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">Description of what the manuscript is (esp. useful for liturgical books). </skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P19">
+		<rdfs:label
+			xml:lang="en">subject as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition
+			xml:lang="en">What the works/texts in the manuscript are about. </skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P20 qualifies P18 -->
+	<owl:Class
+		rdf:ID="sP18o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P18"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P20">
+		<rdfs:label
+			xml:lang="en">term in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP18o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P21">
+		<rdfs:label
+			xml:lang="en">language as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P22 qualifies P21 -->
+	<owl:Class
+		rdf:ID="sP21o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P21"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P22">
+		<rdfs:label
+			xml:lang="en">term in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP21o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<!-- should this take a date or point in time instead? -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P23">
+		<rdfs:label
+			xml:lang="en">production date as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>Date when the manuscript was produced.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P24 qualifies P23 -->
+	<owl:Class
+		rdf:ID="sP23o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P23"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P24">
+		<rdfs:label
+			xml:lang="en">production century in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP23o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<!-- P25 qualifies P23 -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P25">
+		<rdfs:label
+			xml:lang="en">century</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#spP23o"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P26">
+		<rdfs:label
+			xml:lang="en">dated</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:range>
+		<skos:definition>Is the manuscript dated or datable.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P27">
+		<rdfs:label
+			xml:lang="en">production place as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>Location where the manuscript was produced.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P28 qualifies P27 -->
+	<owl:Class
+		rdf:ID="sP27o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P27"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P28">
+		<rdfs:label
+			xml:lang="en">place in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP27o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P29">
+		<rdfs:label
+			xml:lang="en">physical description</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>Description of binding; dimensions of manuscript; number of folios;
+			decoration information.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P30">
+		<rdfs:label
+			xml:lang="en">material as recorded</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>Description of binding; dimensions of manuscript; number of folios;
+			decoration information.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P31 qualifies P30 -->
+	<owl:Class
+		rdf:ID="sP30o">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty
+					rdf:resource="https://catalog.digital-scriptorium.org/wiki/Property:P30"/>
+				<owl:cardinality
+					rdf:datatype="xsd:nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<skos:scopeNote>attempt at defining an anonymous statement node for this
+			property</skos:scopeNote>
+	</owl:Class>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P31">
+		<rdfs:label
+			xml:lang="en">material in authority file</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP30o"/>
+		<rdfs:range
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+		<skos:definition>Physical medium of manuscript (parchment, paper, etc.)</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<!-- making an assumption that note should be available on all Items -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P32">
+		<rdfs:label
+			xml:lang="en">note</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>Miscellaneous note.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- making an assumption that acknowledgments go on Q3 -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P33">
+		<rdfs:label
+			xml:lang="en">acknowledgments</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>Acknowledgements for 3rd party catalogers.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- 
+These two properties are baked into Wikibase; 
+they're also symptomatic of a document-centric understanding of linked data?
+Should they be available on all records? Surely that's redundant, as it is on Q3.
+ -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P34">
+		<rdfs:label
+			xml:lang="en">date added</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+		<skos:definition>Timestamp of DS record creation.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P35">
+		<rdfs:label
+			xml:lang="en">date last updated</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+		<skos:definition>Timestamp of last DS record update.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P36 qualifies P23 -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P36">
+		<rdfs:label
+			xml:lang="en">latest date</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP23o"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P1326"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<!-- P36 qualifies P23 -->
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P37">
+		<rdfs:label
+			xml:lang="en">earliest date</rdfs:label>
+		<rdfs:domain
+			rdf:resource="#sP23o"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+		<!-- Tacitly correcting a typo in the wikidata property here -->
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P1319"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P38">
+		<rdfs:label
+			xml:lang="en">start time</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Entity:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+		<skos:definition>time an item begins to exist or a statement starts being
+			valid</skos:definition>
+		<!-- Tacitly correcting a typo in the wikidata property here -->
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P580"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P39">
+		<rdfs:label
+			xml:lang="en">end time</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Entity:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+		<skos:definition>time an item ceases to exist or a statement stops being
+			valid</skos:definition>
+		<!-- Tacitly correcting a typo in the wikidata property here -->
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P582"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P40">
+		<rdfs:label
+			xml:lang="en">external identifier</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
+		<skos:definition
+			xml:lang="en">A local identifier for the entity in an external system.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P41">
+		<rdfs:label
+			xml:lang="en">IIIF manifest</rdfs:label>
+		<rdfs:domain
+			rdf:resource="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+		<skos:definition
+			xml:lang="en">JSON-LD formatted document URL reference described by the IIIF
+			Presentation API.</skos:definition>
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P6108"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P42">
+		<rdfs:label
+			xml:lang="en">Wikidata QID</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
+		<skos:definition
+			xml:lang="en">Wikidata item identifier.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P44">
+		<rdfs:label
+			xml:lang="en">VIAF ID</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
+		<skos:definition
+			xml:lang="en">identifier for the Virtual International Authority File database [format:
+			up to 22 digits].</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P44">
+		<rdfs:label
+			xml:lang="en">External URI</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+		<skos:definition
+			xml:lang="en">External URI describing the same entity.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P45">
+		<rdfs:label
+			xml:lang="en">equivalent property</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<rdf:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P17"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P18"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P19"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P20"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P21"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P22"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P23"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P24"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P25"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P26"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P27"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P28"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P29"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P30"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P31"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P32"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P33"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P34"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P35"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P36"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P37"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P38"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P39"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P40"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P41"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P42"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P43"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P44"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P45"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P46"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P47"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P48"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P49"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P50"/>
+				</rdf:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+		<skos:definition
+			xml:lang="en">equivalent property in other ontologies.</skos:definition>
+		<skos:scopeNote>(use in statements on properties, use property URI)</skos:scopeNote>
+		<owl:sameAs
+			rdf:resource="https://www.wikidata.org/wiki/Property:P1628"/>
+		<owl:sameAs
+			rdf:resource="http://www.w3.org/2002/07/owl#equivalentProperty"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P46">
+		<rdfs:label
+			xml:lang="en">formatter URL</rdfs:label>
+		<rdfs:domain
+			rdf:resource="http://www.w3.org/2001/XMLSchema#id"/>
+		<rdfs:range
+			rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<skos:definition>web page URL; URI template from which "$1" can be automatically replaced
+			with the effective property value on items.</skos:definition>
+		<owl:sameAs
+			rdf:resource=">http://www.wikidata.org/entity/P1630"/>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty
+		rdf:about="https://catalog.digital-scriptorium.org/wiki/Property:P47">
+		<rdfs:label
+			xml:lang="en">subclass of</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range>
+			<owl:Class>
+				<owl:unionOf
+					rdf:parseType="Collection">
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q1"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q2"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q3"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q4"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q5"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q6"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q7"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q8"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q9"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q10"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q11"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q12"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q13"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q14"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q15"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q16"/>
+					<owl:Class
+						rdf:about="https://catalog.digital-scriptorium.org/wiki/Item:Q17"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:range>
+		<skos:definition
+			xml:lang="en">this item is a subclass (subset) of that item; all instances of these
+			items are instances of those items.</skos:definition>
+		<dcterms:issued>2023-03-14T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2023-03-21T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+</rdf:RDF>
