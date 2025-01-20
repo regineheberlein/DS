@@ -292,5 +292,4 @@ let $csv :=
 }</csv>
 
 let $csv := document{$csv/text()}
-(:return put($csv, "ead2ds.csv")
-:)return $csv
+return put($csv, "ead2ds.csv")
